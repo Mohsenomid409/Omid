@@ -13,11 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build APK
+      - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
+        with:
+          workdir: .
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: apk
           path: bin/*.apk
