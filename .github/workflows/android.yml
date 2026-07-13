@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build with Buildozer
+      - name: Build APK
         uses: ArtemSBulgakov/buildozer-action@v1
 
       - name: Upload APK
